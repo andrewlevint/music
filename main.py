@@ -1,0 +1,17 @@
+import pathlib
+import pprint
+
+from awl_utils import yaml
+
+t_card = '''<div class="book-card mb-5 border-0  card">
+<div class="book-card-img shadow rounded-0 bg-body" style="background-image: url(&quot;/bg-no-book-cropped.png&quot;); background-size: cover; width: 100%; aspect-ratio: 0.643915 / 1;"><a class="book-card-img-a"><span class=" lazy-load-image-background blur lazy-load-image-loaded" style="color: transparent; display: inline-block;"><img class="card-img-top rounded-0 text-center" src="https://librariumprivatus.github.io/3-data-librariumprivatus/store/covers-q80w400h500/besplotn-9e2b3399.jpg"></span></a></div><div class="card-body"><div class="h5">Бесплотные герои Происхождение образ.djvu.pdf</div><div class="flex-column"><div class="small"><a href="https://internatmsu-my.sharepoint.com/personal/andreylevin_office_internat_msu_ru/_layouts/15/onedrive.aspx?ga=1&amp;id=/personal/andreylevin_office_internat_msu_ru/Documents/1%20%F0%9F%8F%9B%20Biblioteka/001%20%F0%9F%AA%B2%20Philosophy/1%20%F0%9F%8F%82%20Bright%20Personalities/0%20-%20Homer/%D0%91%D0%B5%D1%81%D0%BF%D0%BB%D0%BE%D1%82%D0%BD%D1%8B%D0%B5%20%D0%B3%D0%B5%D1%80%D0%BE%D0%B8%20%D0%9F%D1%80%D0%BE%D0%B8%D1%81%D1%85%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7.djvu.pdf&amp;parent=001%20%F0%9F%AA%B2%20Philosophy/1%20%F0%9F%8F%82%20Bright%20Personalities/0%20-%20Homer" target="_blank"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zM393.4 288H328v112c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V288h-65.4c-14.3 0-21.4-17.2-11.3-27.3l105.4-105.4c6.2-6.2 16.4-6.2 22.6 0l105.4 105.4c10.1 10.1 2.9 27.3-11.3 27.3z"></path></svg>&nbsp;Download</a></div><div class="small"><a href="#/book/besplotn-9e2b3399#title"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"></path></svg>&nbsp;NewTab</a></div><div class="small"><a class="link-primary"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M448 344v112a23.94 23.94 0 0 1-24 24H312c-21.39 0-32.09-25.9-17-41l36.2-36.2L224 295.6 116.77 402.9 153 439c15.09 15.1 4.39 41-17 41H24a23.94 23.94 0 0 1-24-24V344c0-21.4 25.89-32.1 41-17l36.19 36.2L184.46 256 77.18 148.7 41 185c-15.1 15.1-41 4.4-41-17V56a23.94 23.94 0 0 1 24-24h112c21.39 0 32.09 25.9 17 41l-36.2 36.2L224 216.4l107.23-107.3L295 73c-15.09-15.1-4.39-41 17-41h112a23.94 23.94 0 0 1 24 24v112c0 21.4-25.89 32.1-41 17l-36.19-36.2L263.54 256l107.28 107.3L407 327.1c15.1-15.2 41-4.5 41 16.9z"></path></svg>&nbsp;Details</a></div></div><div class="d-none">books.cover_ratio: 1.553<br></div></div></div>
+'''
+
+
+def main():
+    data_file = pathlib.Path('data.yaml')
+    data = yaml.read_yaml(data_file)
+    pprint.pprint(data)
+
+
+main()
